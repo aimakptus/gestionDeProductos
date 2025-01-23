@@ -3,7 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
+
 const connectDB = require('./src/config/database');
+const userRoutes = require('./src/routes/userRoutes');
 
 // Dotenv para acceder a las variables de entorno
 dotenv.config();
@@ -11,22 +13,20 @@ dotenv.config();
 // Conexión a la base de datos
 connectDB();
 
-// Instancia de EXpress
+// Instancia de Express
 const app = express();
 
 // Middleware
 app.use(cors()); // Habilitacion del CORS
-app.use(express.json()); // Analisis de curpos JSON
+app.use(express.json()); // Análisis de curpos JSON
 
-// Conexión a mongoDB
-mongoose.connect(process.env.MONGO_URI)
-    .then(() => console.log('Conexión exitosa'))
-    .catch(err => console.error('Error de conexión', err));
-
-// Rutas
-app.get('/', (req, res) =>{
+// Ruta de prueba
+app.get('/', (req, res) => {
     res.send('Servidor en funcionamiento.');
 });
+
+// Rutas de usuario
+app.use('/api/users', userRoutes);
 
 // Arranque del servidor
 const PORT = process.env.PORT || 5000;

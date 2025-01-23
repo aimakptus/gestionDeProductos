@@ -1,0 +1,68 @@
+### Registro de usuario
+POST http://localhost:5000/api/users/register
+Content-Type: application/json
+
+{
+  "fullName": "Julian",
+  "email": "julian@gmail.com",
+  "password": "paquita123"
+}
+
+###
+
+### Inicio de sesión
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "julian@gmail.com",
+  "password": "paquita123"
+}
+
+###
+
+### Crear un producto
+POST http://localhost:5000/api/products
+Content-Type: application/json
+
+{
+  "name": "Aceite de Cocina",
+  "description": "Aceite de oliva extra virgen",
+  "price": 27900,
+  "category": "Cocina",
+  "stock": 20
+}
+
+###
+
+### Obtener productos (todos)
+GET http://localhost:5000/api/products
+Content-Type: application/json
+
+###
+
+### Obtener productos por nombre
+GET http://localhost:5000/api/products?name=jabón
+Content-Type: application/json
+
+###
+
+### Actualizar producto - buscar el id en la base de datos
+PUT http://localhost:5000/api/products/6792cfb3b184f39636800f20
+Content-Type: application/json
+
+{
+  "name": "Jabón Líquido Antibacterial",
+  "description": "Jabón líquido antibacteriano para manos",
+  "price": 10000,
+  "category": "Higiene",
+  "stock": 120
+}
+
+###
+
+### Eliminar producto - buscar el id en la base de datos
+DELETE http://localhost:5000/api/products/6792cfb3b184f39636800f20
+Content-Type: application/json
+
+###
