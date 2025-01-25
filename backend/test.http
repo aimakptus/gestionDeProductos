@@ -24,11 +24,12 @@ Content-Type: application/json
 ### Crear un producto
 POST http://localhost:5000/api/products
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczNzgxNDkxNSwiZXhwIjoxNzM3ODE4NTE1fQ.KIPaofEtiqPSRskePXTe1pqiE4-UJISKbPvlX0RmKYA
 
 {
-  "name": "Aceite de Cocina",
-  "description": "Aceite de oliva extra virgen",
-  "price": 27900,
+  "name": "Leche",
+  "description": "Leche deslactosada descremada",
+  "price": 5000,
   "category": "Cocina",
   "stock": 20
 }
@@ -38,18 +39,21 @@ Content-Type: application/json
 ### Obtener productos (todos)
 GET http://localhost:5000/api/products
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczNzgxNDkxNSwiZXhwIjoxNzM3ODE4NTE1fQ.KIPaofEtiqPSRskePXTe1pqiE4-UJISKbPvlX0RmKYA
 
 ###
 
 ### Obtener productos por nombre
-GET http://localhost:5000/api/products?name=jabón
+GET http://localhost:5000/api/products?name=ace
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczNzgxNDkxNSwiZXhwIjoxNzM3ODE4NTE1fQ.KIPaofEtiqPSRskePXTe1pqiE4-UJISKbPvlX0RmKYA
 
 ###
 
 ### Actualizar producto - buscar el id en la base de datos
-PUT http://localhost:5000/api/products/6792cfb3b184f39636800f20
+PUT http://localhost:5000/api/products/6792cff9b184f39636800f26
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczNzgxNDkxNSwiZXhwIjoxNzM3ODE4NTE1fQ.KIPaofEtiqPSRskePXTe1pqiE4-UJISKbPvlX0RmKYA
 
 {
   "name": "Jabón Líquido Antibacterial",
