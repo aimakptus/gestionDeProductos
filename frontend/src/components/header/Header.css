@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2vh 4vh;
+    color: #dedede;
+    background-color: #1E1E1E; /* Fondo claro */
+    border-bottom: 0.6vh solid #dedede; /* Línea inferior */
+  }
+  
+  .headerTitle {
+    font-size: 4vh;
+    font-weight: bold;
+  }
+  
+  .iconButtonUser {
+    height: 5.4vh;
+    width: 5.4vh;
+    border-radius: 50%;
+    background: #5082A0;
+    border: none;
+    font-size: 3vh;
+    cursor: pointer;
+    color: #dedede;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .iconButtonUser:hover {
+    box-shadow: 0 0 2vh 0 #dedede73;
+  }

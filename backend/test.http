@@ -21,6 +21,12 @@ Content-Type: application/json
 
 ###
 
+### obtener usuarios
+GET  http://localhost:5000/api/users/user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczODAxNjAwMiwiZXhwIjoxNzM4MDE5NjAyfQ.c9pzTNiTXgM31OhhU-rp4j7e2daHYGK7DaRkakoFxVE
+###
+
 ### Crear un producto
 POST http://localhost:5000/api/products
 Content-Type: application/json

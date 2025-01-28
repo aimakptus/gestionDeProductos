@@ -52,4 +52,31 @@ const loginUser = async (req, res) => {
     }
 };
 
-module.exports = { registerUser, loginUser };
+// Obtención de datos
+const getUser = async (req, res) => {
+    try {
+        // Obtener el token de autorización de los encabezados de la solicitud
+        const token = req.headers.authorization?.split(' ')[1]; // Se espera un token tipo "Bearer <token>"
+        if (!token) {
+            return res.status(401).json({ message: 'No token provided' });
+        }
+
+        // Verificar el token y decodificarlo
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        const userId = decoded.id;
+
+        // Buscar al usuario en la base de datos
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        // Devolver la información del usuario (en este caso solo el nombre)
+        res.json({ fullName: user.fullName });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Error retrieving user data', error });
+    }
+};
+
+module.exports = { registerUser, loginUser, getUser };
