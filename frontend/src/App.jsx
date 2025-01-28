@@ -1,20 +1,49 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Header from "./components/header/Header";
 import Login from "./components/logIn/LogIn";
-import Register from "./components/Register/Register"; // Importar el formulario de registro
-import Home from "./components/logIn/LogIn"; // Cambié a la ruta correcta
+import Register from "./components/register/Register";
+import About from "./components/about/About";
 import Footer from "./components/footer/Footer";
+import Inventory from "./components/inventory/Inventory";
+import "./App.css"
 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setIsAuthenticated(false); // Cambia el estado global
+    localStorage.removeItem("authToken");
+  };
+
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} /> {/* Ruta para registro */}
-        <Route path="/" element={<Home />} /> {/* Página principal */}
-      </Routes>
+      <div className="mainHeader">
+        {isAuthenticated && <Header onLogout={handleLogout} />} {/* Pasamos handleLogout */}
+      </div>
+
+      <div className="mainContainer">
+        {!isAuthenticated && <About />}
+        <Routes>
+          <Route
+            path="/"
+            element={isAuthenticated ? <Inventory /> : <Login onLogin={handleLogin} />}
+          />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      </div>
+
       <Footer />
     </Router>
   );

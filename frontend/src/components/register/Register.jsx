@@ -76,7 +76,7 @@ const Register = () => {
           placeholder="●●●●●●●●"
         />
         <button type="submit">Sign Up</button>
-        <p>Already have an account? <Link to="/LogIn">Log In!</Link></p>
+        <p>Already have an account? <Link to="/">Log In!</Link></p>
         {error && <p className="error">{error}</p>}
         {success && <p className="success">{success}</p>}
       </form>

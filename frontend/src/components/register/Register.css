@@ -5,7 +5,6 @@
 
   background-color: #2D2D2D;
   margin: 3vh;
-  margin-left: auto;
   border-radius: 2vh;
 
   display: flex;
@@ -90,13 +89,6 @@
 
 .success {
   color: #28a745; /* Color verde para mensajes de éxito */
-  font-size: 14px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.error {
-  color: #dc3545;
   font-size: 14px;
   margin-top: 10px;
   text-align: center;

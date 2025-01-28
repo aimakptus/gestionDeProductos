@@ -6,7 +6,7 @@
 
   background-color: #2D2D2D;
   margin: 3vh;
-  margin-left: auto;
+
   border-radius: 2vh;
 
 
@@ -58,6 +58,7 @@
 .loginForm button {
   background: #648C5A;
   padding: 0.4vh 2.3vh;
+  margin-top: 1vh;
   color: white;
   border: none;
   border-radius: 1.4vh;
@@ -91,8 +92,7 @@
 }
 
 .error {
-  color: #dc3545;
-  font-size: 14px;
-  margin-top: 10px;
+  color: #B43C3C;
+  margin-top: 0;
   text-align: center;
 }

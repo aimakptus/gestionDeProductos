@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-import "./LogIn.css"
+import "./LogIn.css";
 
-const Login = () => {
+const Login = ({ onLogin }) => { // Asegúrate de recibir onLogin como prop
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -19,10 +19,14 @@ const Login = () => {
       });
 
       // Guardar el token en el almacenamiento local
-      localStorage.setItem("authToken", response.data.token);
+      const token = response.data.token;
+      localStorage.setItem("authToken", token);
 
-      // Redirigir al usuario (puedes redirigir al home o dashboard)
-      window.location.href = "/"; // O usar React Router para redirigir
+      // Notifica al estado global que el usuario está autenticado
+      onLogin();
+
+      // Redirige al usuario
+      window.location.href = "/";
     } catch (error) {
       setError(error.response?.data?.message || "Log in error.");
     }
@@ -31,7 +35,7 @@ const Login = () => {
   return (
     <div className="loginForm">
       <form onSubmit={handleSubmit}>
-        <h2>WELCOME</h2>
+        <h2>Sign in</h2>
         <label>Email</label>
         <input
           type="email"
