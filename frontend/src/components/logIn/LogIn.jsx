@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./LogIn.css"
 
@@ -12,7 +13,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/api/login", {
+      const response = await axios.post("http://localhost:5000/api/users/login", {
         email,
         password,
       });
@@ -23,7 +24,7 @@ const Login = () => {
       // Redirigir al usuario (puedes redirigir al home o dashboard)
       window.location.href = "/"; // O usar React Router para redirigir
     } catch (error) {
-      setError(error.response?.data?.message || "Error al iniciar sesión");
+      setError(error.response?.data?.message || "Log in error.");
     }
   };
 
@@ -48,8 +49,8 @@ const Login = () => {
           placeholder="●●●●●●●●"
         />
         <button type="submit">Log in</button>
+        <p>New in InvBench? <Link to="/register">Let's get started!</Link></p>
         {error && <p className="error">{error}</p>}
-        <p>New in InvBench? <a href="#">Let's get started!</a></p>
       </form>
     </div>
   );

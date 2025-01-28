@@ -12,7 +12,7 @@ const Header = () => {
         const token = localStorage.getItem("authToken");
 
         if (token) {
-          const response = await axios.get("http://localhost:5000/api/user", {
+          const response = await axios.get("http://localhost:5000/api/users/user", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
@@ -34,7 +34,7 @@ const Header = () => {
       <h1 className="headerTitle">INVBENCH</h1>
       <div className="headerIcons">
         <button className="iconButtonUser" aria-label="Usuario">
-          {userName ? userName.charAt(0).toUpperCase() : "J"}
+          {userName ? userName.charAt(0).toUpperCase() : "A"}
         </button>
       </div>
     </header>

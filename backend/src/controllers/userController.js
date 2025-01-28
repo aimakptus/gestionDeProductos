@@ -34,21 +34,21 @@ const loginUser = async (req, res) => {
         // Buscar usuario por email en la base de datos
         const user = await User.findOne({ email });
         if (!user) {
-            return res.status(400).json({ message: 'El usuario no existe.' });
+            return res.status(400).json({ message: 'User not found' });
         }
 
         // Verificación la contraseña
         const isPasswordValid = await bcrypt.compare(password, user.password);
         if (!isPasswordValid) {
-            return res.status(400).json({ message: 'Contraseña incorrecta.' });
+            return res.status(400).json({ message: 'Incorrect password' });
         }
 
         // Creación del token con JWT
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        res.status(200).json({ message: 'Inicio de sesión exitoso.', token });
+        res.status(200).json({ message: 'Login successful', token });
     } catch (error) {
-        res.status(500).json({ message: 'Error al iniciar sesión.', error });
+        res.status(500).json({ message: 'Authentication error', error });
     }
 };
 

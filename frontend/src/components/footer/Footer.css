@@ -1,0 +1,31 @@
+.footer {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.2vh 4vh;
+    padding-bottom: auto;
+    color: #dedede;
+    background-color: #1E1E1E;
+    border-top: 0.6vh solid #dedede;
+}
+
+.footer a, .footer svg {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #5082A0;
+  fill: #5082A0;
+}
+
+.footer a:hover, .footer svg:hover {
+  text-decoration: none;
+  color: #5081a080;
+  fill: #5082A080;
+}
+
+.footer svg {
+  width: 4vh;
+  height: 4vh;
+  margin-left: 1vh;
+}

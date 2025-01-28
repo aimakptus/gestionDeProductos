@@ -22,9 +22,9 @@
     font-size: 3vh;
     cursor: pointer;
     color: #dedede;
-    transition: box-shadow 0.3s ease;
+    transition: background 0.3s ease;
   }
   
   .iconButtonUser:hover {
-    box-shadow: 0 0 2vh 0 #dedede73;
+    background: #5082A080;
   }
