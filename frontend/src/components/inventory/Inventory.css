@@ -1,4 +1,159 @@
-.tituloInventario {
-    color: white;
-    background-color: green;
+.searchBar {
+    width: 100vh;
+    height: 8vh;
+  
+    background-color: #2D2D2D;
+    padding: 2vh 2.3vh;
+    margin: 3vh;
+    border-radius: 2vh;
+  
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+}
+
+.searchBar input {
+    width: 83.4vh;
+    padding: 0.2vh 2.3vh;
+    border-radius: 1.4vh;
+    background-color: #646464;
+    border: 0.3vh solid #b7b7b7;
+    color: #dedede;
+    font-size: 2.2vh;
+    font-weight: 300;
+}
+
+.searchBar input:focus {
+    outline: none;
+    border-color: #dedede;
+}
+
+.searchButton {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    background: #5082a0;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.searchButton:hover {
+    background: #5082a080;
+}
+
+.addButton {
+    height: 4vh;
+    width: 4vh;
+    border-radius: 50%;
+    background: #648C5A;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.addButton:hover {
+    background: #648C5A80;
+}
+
+.formatIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #dedede;
+    height: 2vh;
+    width: 4vh;
+}
+
+/* Table */
+
+.table {
+    width: 100vh;
+    height: 67vh;
+  
+    background-color: #2D2D2D;
+    padding: 2vh 2.3vh;
+    margin: 3vh;
+    border-radius: 2vh;
+  
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+}
+
+.tableHeader{
+    background-color: transparent;
+    border-radius: 1.4vh;
+    height: 4.2vh;
+    overflow: hidden;
+}
+
+.tableHeader thead {
+    background-color: transparent;
+}
+
+.tableHeader tbody {
+    background-color: transparent;
+}
+
+.trHead {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #5082a0;
+    border-radius: 1.4vh;
+}
+
+.trDB {
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #646464;
+    border-radius: 1.4vh;
+}
+
+.tableHeader th {
+    width: 17vh;
+    padding: 0.4vh 2.3vh;
+    background-color: transparent;
+    color: #dedede;
+    font-size: 2.2vh;
+    font-weight: 400;
+    border-right: 0.5vh solid #dedede;
+}
+
+.tableHeader th:first-of-type {
+    width: 42vh;
+    text-align: left;
+}
+
+.tableHeader th:last-of-type {
+    border-right: none;
+}
+
+/* Database */
+
+.tableHeader td {
+    width: 17vh;
+    padding: 0.4vh 2.3vh;
+    background-color: transparent;
+    color: #dedede;
+    font-size: 2.2vh;
+    font-weight: 400;
+    border-right: 0.5vh solid #dedede;
+}
+
+.tableHeader td:first-of-type {
+    width: 42vh;
+    text-align: left;
+}
+
+.tableHeader td:last-of-type {
+    border-right: none;
 }

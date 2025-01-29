@@ -30,14 +30,14 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZ
 ### Crear un producto
 POST http://localhost:5000/api/products
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczNzgxNDkxNSwiZXhwIjoxNzM3ODE4NTE1fQ.KIPaofEtiqPSRskePXTe1pqiE4-UJISKbPvlX0RmKYA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3OTFiMThmZjdjMjE4ZDkwYWRiNTE5YSIsImlhdCI6MTczODEyNTM1OCwiZXhwIjoxNzM4MTI4OTU4fQ.sl0R1JcNNjxq3Dg-_1UnmP6guK9jHCrje0mmngDxiR4
 
 {
-  "name": "Leche",
+  "name": "Huebos",
   "description": "Leche deslactosada descremada",
-  "price": 5000,
+  "price": 500,
   "category": "Cocina",
-  "stock": 20
+  "stock": 2
 }
 
 ###

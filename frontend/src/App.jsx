@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={isAuthenticated ? <Inventory /> : <Login onLogin={handleLogin} />}
+            element={isAuthenticated ? <Inventory /> : <Login onLogin={() => setIsAuthenticated(true)} />}
           />
           <Route path="/register" element={<Register />} />
         </Routes>

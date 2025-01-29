@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom"; // Importa useNavigate
 import "./LogIn.css";
 
-const Login = ({ onLogin }) => { // Asegúrate de recibir onLogin como prop
+const Login = ({ onLogin }) => { // Asegúrate de recibir la prop onLogin
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Instancia de useNavigate
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,15 +18,15 @@ const Login = ({ onLogin }) => { // Asegúrate de recibir onLogin como prop
         password,
       });
 
-      // Guardar el token en el almacenamiento local
+      // Guardar el token
       const token = response.data.token;
       localStorage.setItem("authToken", token);
 
-      // Notifica al estado global que el usuario está autenticado
-      onLogin();
+      // Notificar al estado global que el usuario está autenticado
+      onLogin(); 
 
-      // Redirige al usuario
-      window.location.href = "/";
+      // Redirigir sin recargar
+      navigate("/"); 
     } catch (error) {
       setError(error.response?.data?.message || "Log in error.");
     }
