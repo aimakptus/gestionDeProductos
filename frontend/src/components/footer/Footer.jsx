@@ -5,8 +5,8 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        <a href="https://github.com/aimakptus" target="_blank" rel="noopener noreferrer">
-          Julian Valenzuela
+        <a href="https://github.com/aimakptus/gestionDeProductos" target="_blank" rel="noopener noreferrer">
+          Contributions are welcome! This is a FOSS project.  
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

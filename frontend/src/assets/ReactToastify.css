@@ -1,0 +1,109 @@
+/* toastify-custom.css */
+
+/* Contenedor de las notificaciones */
+.Toastify__toast-container {
+    top: 1rem; /* Distancia desde la parte superior */
+    right: 1rem; /* Distancia desde la derecha */
+  }
+  
+  /* Estilos base de las notificaciones */
+  .Toastify__toast {
+    background-color: transparent;
+    color: #dedede;
+    border-radius: 1vh; /* Bordes redondeados */
+    box-shadow: none;
+    padding: 2vh; /* Espaciado interno */
+    font-family: 'Lexend', sans-serif; /* Fuente */
+    font-weight: 300;
+    margin-bottom: 1vh; /* Espacio entre notificaciones */
+    min-height: auto; /* Evita altura mínima predeterminada */
+  }
+  
+  /* Eliminar iconos predeterminados */
+  .Toastify__toast-body {
+    display: flex;
+    align-items: center;
+    padding: 0; /* Elimina el padding predeterminado */
+  }
+  
+  .Toastify__toast-body::before {
+    display: none; /* Oculta los iconos predeterminados */
+  }
+  
+  /* Eliminar el margen inferior feo */
+  .Toastify__toast-container--top-right {
+    padding: 0; /* Elimina el padding del contenedor */
+  }
+  
+  /* Icono de éxito (verde) */
+  .Toastify__toast--success {
+    background-color: #648C5A; /* Verde */
+  }
+  
+  /* Icono de error (rojo) */
+  .Toastify__toast--error {
+    background-color: #B43C3C; /* Rojo */
+  }
+  
+  /* Icono de advertencia (amarillo) */
+  .Toastify__toast--warning {
+    background-color: #B43C3C; /* Amarillo */
+  }
+  
+  /* Icono de información (azul) */
+  .Toastify__toast--info {
+    background-color: #5082a0; /* Azul */
+  }
+  
+  /* Botón de cerrar */
+  .Toastify__close-button {
+    margin: 0;
+    padding: 0;
+    height: 1.5vh;
+    width: 1.5vh;
+    border-radius: 50%; /* Hace el botón redondo */
+    background-color: transparent; /* Fondo transparente */
+    color: #dedede; /* Color del icono de cerrar */
+    opacity: 0.7; /* Opacidad */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Elimina el borde predeterminado */
+  }
+  
+  .Toastify__close-button:hover {
+    opacity: 1; /* Opacidad al pasar el mouse */
+  }
+  
+  /* Barra de progreso */
+  .Toastify__progress-bar {
+    background-color: #64646480; /* Barra de progreso semi-transparente */
+    height: 2px; /* Altura de la barra */
+  }
+  
+  /* Eliminar el cuadro gris antes de la notificación */
+  .Toastify__toast--animate {
+    animation: none; /* Desactiva la animación predeterminada */
+  }
+  
+  .Toastify__toast--animate-enter {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  
+  .Toastify__toast--animate-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .Toastify__toast--animate-exit {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .Toastify__toast--animate-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }

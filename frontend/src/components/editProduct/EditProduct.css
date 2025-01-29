@@ -1,0 +1,160 @@
+.editProductFull {
+    color: #dedede;
+}
+
+/* Update Delete */
+
+.updateDelete {
+    width: 66.4vh;
+    height: 8vh;
+  
+    background-color: #2D2D2D;
+    padding: 0 2.3vh;
+    margin: 3vh;
+    border-radius: 2vh;
+  
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 2vh;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+}
+
+.updateDelete button {
+    background: #648C5A;
+    padding: 0.4vh 2.3vh;
+    margin: 2vh 0;
+    color: #dedede;
+    border: none;
+    border-radius: 1.4vh;
+    font-size: 2.6vh;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.updateDelete button:hover {
+    background: #648C5A80 ;
+}
+
+.updateDelete button:first-of-type {
+    background: #5082a0;
+}
+
+.updateDelete button:first-of-type:hover {
+    background: #5082a080;
+}
+
+.updateDelete button:last-of-type {
+    background: #B43C3C;
+}
+
+.updateDelete button:last-of-type:hover {
+    background: #B43C3C80;
+}
+
+/* Product info */
+
+.editProduct {
+    width: 66.4vh;
+    height: 67vh;
+  
+    background-color: #2D2D2D;
+    padding: 2vh 2.3vh;
+    margin: 3vh;
+    border-radius: 2vh;
+  
+  
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2vh rgba(0, 0, 0, 0.1);
+}
+
+.infoProductMain {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.infoProductMain label {
+    font-size: 2.6vh;
+    font-weight: 300;
+    color: #cecece;
+    background-color: transparent;
+    padding: 1vh 2.3vh;
+}
+
+.infoProductMain input {
+    padding: 0.2vh 2.3vh;
+    margin: 1vh 0;
+    border: 0.3vh solid #b7b7b7;
+    color: #dedede;
+    background-color: #646464;
+    border-radius: 1vh;
+    font-size: 2.6vh;
+    font-weight: 300;
+    border-radius: 1.4vh;
+}
+
+.infoProductMain input:focus {
+    outline: none;
+    border-color: #dedede;
+}
+
+.infoProductMain textarea {
+    padding: 0.2vh 2.3vh;
+    margin: 1vh 0;
+    border: 0.3vh solid #b7b7b7;
+    color: #dedede;
+    background-color: #646464;
+    border-radius: 1vh;
+    font-size: 2.6vh;
+    font-weight: 300;
+    border-radius: 1.4vh;
+    resize: none;
+    line-height: 1.5;
+}
+
+.infoProductMain textarea:focus {
+    outline: none;
+    border-color: #dedede;
+}
+
+.infoProductExtra {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.infoProductExtra div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 1vh 0;
+}
+
+.infoProductExtra label {
+    font-size: 2.6vh;
+    font-weight: 300;
+    color: #cecece;
+    background-color: transparent;
+    padding: 0.6vh 2.3vh;
+}
+
+.infoProductExtra input {
+    padding: 0.2vh 2.3vh;
+    margin: 0vh;
+    border: 0.3vh solid #b7b7b7;
+    color: #dedede;
+    background-color: #646464;
+    border-radius: 1vh;
+    font-size: 2.6vh;
+    font-weight: 300;
+    border-radius: 1.4vh;
+}
+
+.infoProductExtra input:focus {
+    outline: none;
+    border-color: #dedede;
+}

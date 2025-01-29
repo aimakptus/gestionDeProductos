@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Inventory.css";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faPlus } from "@fortawesome/free-solid-svg-icons";
-
-const Inventory = () => {
+const Inventory = ({ onProductSelect, refreshKey }) => { // Recibimos onProductSelect y refreshKey como props
     const [products, setProducts] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");  // Estado para la búsqueda
     const [filteredProducts, setFilteredProducts] = useState([]);  // Estado para los productos filtrados
@@ -36,7 +33,7 @@ const Inventory = () => {
         };
 
         fetchProducts();
-    }, []);
+    }, [refreshKey]); // Agregamos refreshKey como dependencia para que se ejecute cuando cambie
 
     // Filtrar productos en tiempo real
     useEffect(() => {
@@ -61,12 +58,6 @@ const Inventory = () => {
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}  // Actualiza el término de búsqueda en tiempo real
                 />
-                <button className="searchButton">
-                    <FontAwesomeIcon className="formatIcon" icon={faMagnifyingGlass} />
-                </button>
-                <button className="addButton">
-                    <FontAwesomeIcon className="formatIcon" icon={faPlus} />
-                </button>
             </section>
             <section className="table">
                 <table className="tableHeader">
@@ -80,7 +71,11 @@ const Inventory = () => {
                     </thead>
                     <tbody>
                         {filteredProducts.map((product) => (
-                            <tr key={product._id} className="trDB">
+                            <tr 
+                                key={product._id} 
+                                className="trDB"
+                                onClick={() => onProductSelect(product)} // Manejador de clic para seleccionar un producto
+                            >
                                 <td>{product.name}</td>
                                 <td>{product.category}</td>
                                 <td>${product.price.toFixed(2)}</td>
