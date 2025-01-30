@@ -3,7 +3,6 @@
 ## Índice
 - [Backend](#backend)
   - [Dependencias](#dependencias)
-  - [Estructura del Proyecto](#estructura-del-proyecto)
   - [Autenticación](#autenticación)
 - [Frontend](#frontend)
   - [Configuración Inicial](#configuración-inicial)
@@ -33,19 +32,6 @@ npm install express mongoose dotenv jsonwebtoken bcryptjs cors
 ### Desarrollo
 ```bash
 npm install --save-dev nodemon  # Recarga automática del servidor
-```
-
----
-
-## Estructura del Proyecto
-```plaintext
-backend/
-├── controllers/      # Lógica de negocio
-├── models/           # Modelos de datos
-├── routes/           # Definición de endpoints
-├── middleware/       # Autenticación JWT
-├── database.js       # Conexión a MongoDB
-└── server.js         # Configuración del servidor
 ```
 
 ---
@@ -134,4 +120,24 @@ cd frontend
 npm install
 npm run dev
 ```
+---
 
+## 📜 Licencias de Terceros  
+Este proyecto utiliza las siguientes bibliotecas de código abierto:
+
+### Backend  
+- [Express](https://expressjs.com/) (MIT)  
+- [Mongoose](https://mongoosejs.com/) (MIT)  
+- [jsonwebtoken (JWT)](https://www.npmjs.com/package/jsonwebtoken) (MIT)  
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs) (MIT)  
+- [cors](https://www.npmjs.com/package/cors) (MIT)  
+- [dotenv](https://www.npmjs.com/package/dotenv) (MIT)  
+
+### Frontend  
+- [React](https://react.dev/) (MIT)  
+- [react-router-dom](https://reactrouter.com/) (MIT)  
+- [Axios](https://axios-http.com/) (MIT)  
+- [react-toastify](https://fkhadra.github.io/react-toastify/) (MIT)  
+- [Vite](https://vitejs.dev/) (MIT)  
+
+📌 **Nota**: Todas las licencias son compatibles con [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).  
